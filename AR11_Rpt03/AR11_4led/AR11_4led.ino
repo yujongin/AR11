@@ -18,20 +18,18 @@ void loop()  {
   dimLed(ledG);
   dimLed(ledB);
   dimLed(ledY);
-  void dimLed(int led){
-  // fade in from min to max in increments of 5 points:
-  for(int fadeValue = 0 ; fadeValue <= 255; fadeValue +=5) { 
-    // sets the value (range from 0 to 255):
+}
+void dimLed(int led)
+{
+    for(int fadeValue = 0 ; fadeValue <= 255; fadeValue +=5) { 
     analogWrite(led, fadeValue);   
-    // wait for 30 milliseconds to see the dimming effect    
     delay(dimTime);                            
   } 
 
-  // fade out from max to min in increments of 5 points:
-for(int fadeValue = 255; fadeValue >= 0; fadeValue -=5){
- //sets the value (range from 0 to 255)
+for(int fadeValue = 255; fadeValue >= 0; fadeValue -=5)
+{
   analogWrite(led, fadeValue);
   delay(dimTime);
 }
-}  
 }
+  
